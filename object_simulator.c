@@ -91,7 +91,7 @@ void mage_attack(Character* self) {
 
     m->mana -= 10;
 
-    printf("%s casts fireball using %d mana!\n",
+    printf("%s casts fireball using 10 mana! Remaining mana: %d\n",
            self->name, m->mana);
 }
 
@@ -140,8 +140,6 @@ int main(void) {
     mage_init(&mage, "Mage", 80, 6, 30);
 
     printf("\n--- Mage ---\n");
-    mage.base.attack((Character*)&mage);
-    mage.base.attack((Character*)&mage);
     mage.base.attack((Character*)&mage);
     mage.base.attack((Character*)&mage);
 
